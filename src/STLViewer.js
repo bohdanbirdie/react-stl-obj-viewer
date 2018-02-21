@@ -88,6 +88,7 @@ class STLViewer extends Component {
             if (orbitControls) {
                 controls = new OrbitControls(camera, ReactDOM.findDOMNode(component));
                 controls.enableKeys = false;
+                controls.addEventListener('change', orbitRender);
             }
 
             ReactDOM.findDOMNode(this).replaceChild(renderer.domElement,
@@ -112,6 +113,10 @@ class STLViewer extends Component {
 
         const render = () => {
             renderer.render(scene, camera);
+        };
+
+        const orbitRender = () => {
+            render();
         };
     }
 

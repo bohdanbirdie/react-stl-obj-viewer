@@ -6,7 +6,7 @@ class App extends Component {
         return (
             <div className="App">
                 <STLViewer url={process.env.PUBLIC_URL + "/bottle.stl"} className="stl" modelColor="#FF0000"/>
-                {/*<OBJViewer url={process.env.PUBLIC_URL + "/bb8.obj"} className="obj" modelColor="#FF0000"/>*/}
+                <OBJViewer url={process.env.PUBLIC_URL + "/bb8.obj"} className="obj" modelColor="#FF0000"/>
             </div>
         );
     }

@@ -70721,6 +70721,7 @@ var STLViewer = function (_Component) {
                 if (orbitControls) {
                     controls = new OrbitControls(camera, _reactDom2.default.findDOMNode(component));
                     controls.enableKeys = false;
+                    controls.addEventListener('change', orbitRender);
                 }
 
                 _reactDom2.default.findDOMNode(_this2).replaceChild(renderer.domElement, _reactDom2.default.findDOMNode(_this2).firstChild);
@@ -70744,6 +70745,10 @@ var STLViewer = function (_Component) {
 
             var render = function render() {
                 renderer.render(scene, camera);
+            };
+
+            var orbitRender = function orbitRender() {
+                render();
             };
         }
     }, {
