@@ -1,0 +1,3 @@
+[submodule "example"]
+	path = example
+	url = https://github.com/bohdanbirdie/stl-obj-demo.git
