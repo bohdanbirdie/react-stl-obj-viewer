@@ -35,6 +35,6 @@ static defaultProps = {
 ## Convert scene to screenshot
 
 Simply get your element _(canvas scene)_ by any selector and call `.toDataURL("image/png")` on it.
+___
 
-## Live demo
-Will be added soon.
+## [Live Demo](https://bohdanbirdie.github.io/stl-obj-demo/).
