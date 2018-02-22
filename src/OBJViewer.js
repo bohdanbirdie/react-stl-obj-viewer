@@ -18,6 +18,8 @@ class OBJViewer extends Component {
         height: PropTypes.number,
         backgroundColor: PropTypes.string,
         modelColor: PropTypes.string,
+        sceneClassName: PropTypes.string,
+        onSceneRendered: PropTypes.func,
     };
 
     static defaultProps = {
@@ -26,6 +28,7 @@ class OBJViewer extends Component {
         height: 400,
         width: 400,
         orbitControls: true,
+        sceneClassName: '',
     };
 
     constructor(props) {
@@ -43,7 +46,7 @@ class OBJViewer extends Component {
 
     renderModel(props) {
         let camera, scene, renderer, controls;
-        const {url, file, width, height, modelColor, backgroundColor, orbitControls} = props;
+        const {url, file, width, height, modelColor, backgroundColor, orbitControls, onSceneRendered, sceneClassName} = props;
         let xDims, yDims, zDims;
 
         camera = new THREE.PerspectiveCamera(30, width / height, 1, 10000);
@@ -87,10 +90,11 @@ class OBJViewer extends Component {
             object.position.y = -95;
             scene.add(object);
 
-            renderer = new THREE.WebGLRenderer({preserveDrawingBuffer: true});
+            renderer = new THREE.WebGLRenderer({preserveDrawingBuffer: true, antialias: true});
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setClearColor(backgroundColor, 1);
             renderer.setSize(width, height);
+            renderer.domElement.className = sceneClassName;
 
             if (orbitControls) {
                 controls = new OrbitControls(camera, ReactDOM.findDOMNode(this));
@@ -104,6 +108,10 @@ class OBJViewer extends Component {
 
 
             render();
+
+            if (typeof onSceneRendered === "function") {
+                onSceneRendered(ReactDOM.findDOMNode(renderer.domElement))
+            }
         };
 
         const onError = function (xhr) {

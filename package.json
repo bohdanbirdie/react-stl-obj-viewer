@@ -1,6 +1,6 @@
 {
   "name": "react-stl-obj-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React components to view STL and OBJ models.",
   "main": "build/index.js",
   "peerDependencies": {
