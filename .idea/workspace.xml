@@ -31,10 +31,10 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="585">
-                <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <first_editor relative-caret-position="360">
+                <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
                 <folding>
-                  <marker date="1519308811905" expanded="true" signature="1197:1259" ph="h2: #### Live demo" />
+                  <marker date="1519309029055" expanded="true" signature="369:495" ph="ordered list: 1. Use OBJ or STL load...wers:" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -45,8 +45,8 @@
       <file leaf-file-name="OBJViewer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OBJViewer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="112" column="31" lean-forward="false" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="31" />
+            <state relative-caret-position="210">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="21" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -184,12 +184,12 @@
       <updated>1519204916884</updated>
       <workItem from="1519204918712" duration="7545000" />
       <workItem from="1519291129740" duration="1910000" />
-      <workItem from="1519308761248" duration="41000" />
+      <workItem from="1519308761248" duration="248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11653000" />
+    <option name="totallyTimeSpent" value="11860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -414,14 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OBJViewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="112" column="31" lean-forward="false" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -431,13 +423,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test-app/src/App.js" />
+    <entry file="file://$PROJECT_DIR$/src/OBJViewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="585">
-            <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
             <folding>
-              <marker date="1519308811905" expanded="true" signature="1197:1259" ph="h2: #### Live demo" />
+              <marker date="1519309029055" expanded="true" signature="369:495" ph="ordered list: 1. Use OBJ or STL load...wers:" />
             </folding>
           </first_editor>
           <second_editor />
