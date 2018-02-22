@@ -5,8 +5,22 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <STLViewer url="https://github.com/bohdanbirdie/react-stl-obj-viewer/blob/master/test-app/build/bottle.stl" className="stl" modelColor="#FF0000"/>
-                <OBJViewer url="https://github.com/bohdanbirdie/react-stl-obj-viewer/blob/master/test-app/build/bb8.obj" className="obj" modelColor="#FF0000"/>
+                <STLViewer
+                    onSceneRendered={(element) => {
+                        console.log(element.toDataURL("image/png"))
+                    }}
+                    url={process.env.PUBLIC_URL + '/bottle.stl'}
+                    className="stl"
+                    modelColor="#FF0000"/>
+
+                {/*<OBJViewer*/}
+                    {/*onSceneRendered={(element) => {*/}
+                        {/*console.log(element.toDataURL("image/png"))*/}
+                    {/*}}*/}
+                    {/*sceneClassName="test-scene"*/}
+                    {/*url='https://3dbear.blob.core.windows.net/cdn/models/b4589679-5ef6-4973-a00d-398f251cd42bobj'*/}
+                    {/*className="obj"*/}
+                    {/*modelColor="#FF0000"/>*/}
             </div>
         );
     }

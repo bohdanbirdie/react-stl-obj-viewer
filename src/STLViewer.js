@@ -18,6 +18,8 @@ class STLViewer extends Component {
         height: PropTypes.number,
         backgroundColor: PropTypes.string,
         modelColor: PropTypes.string,
+        sceneClassName: PropTypes.string,
+        onSceneRendered: PropTypes.func,
     };
 
     static defaultProps = {
@@ -27,6 +29,7 @@ class STLViewer extends Component {
         width: 400,
         rotate: true,
         orbitControls: true,
+        sceneClassName: '',
     };
 
     componentDidMount() {
@@ -35,7 +38,7 @@ class STLViewer extends Component {
 
     renderModel(props) {
         let camera, scene, renderer, mesh, distance, controls;
-        const {url, file, width, height, modelColor, backgroundColor, orbitControls} = props;
+        const {url, file, width, height, modelColor, backgroundColor, orbitControls, sceneClassName, onSceneRendered} = props;
         let xDims, yDims, zDims;
         let component = this;
 
@@ -83,6 +86,7 @@ class STLViewer extends Component {
             });
             renderer.setSize(width, height);
             renderer.setClearColor(backgroundColor, 1);
+            renderer.domElement.className = sceneClassName;
 
 
             if (orbitControls) {
@@ -95,6 +99,10 @@ class STLViewer extends Component {
                 ReactDOM.findDOMNode(this).firstChild);
 
             render();
+
+            if (typeof onSceneRendered === "function") {
+                onSceneRendered(ReactDOM.findDOMNode(renderer.domElement))
+            }
         };
 
         const onProgress = (xhr) => {

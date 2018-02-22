@@ -49772,7 +49772,9 @@ var OBJViewer = function (_Component) {
                 height = props.height,
                 modelColor = props.modelColor,
                 backgroundColor = props.backgroundColor,
-                orbitControls = props.orbitControls;
+                orbitControls = props.orbitControls,
+                onSceneRendered = props.onSceneRendered,
+                sceneClassName = props.sceneClassName;
 
             var xDims = void 0,
                 yDims = void 0,
@@ -49818,10 +49820,11 @@ var OBJViewer = function (_Component) {
                 object.position.y = -95;
                 scene.add(object);
 
-                renderer = new THREE.WebGLRenderer({ preserveDrawingBuffer: true });
+                renderer = new THREE.WebGLRenderer({ preserveDrawingBuffer: true, antialias: true });
                 renderer.setPixelRatio(window.devicePixelRatio);
                 renderer.setClearColor(backgroundColor, 1);
                 renderer.setSize(width, height);
+                renderer.domElement.className = sceneClassName;
 
                 if (orbitControls) {
                     controls = new OrbitControls(camera, _reactDom2.default.findDOMNode(_this2));
@@ -49832,6 +49835,10 @@ var OBJViewer = function (_Component) {
                 _reactDom2.default.findDOMNode(_this2).replaceChild(renderer.domElement, _reactDom2.default.findDOMNode(_this2).firstChild);
 
                 render();
+
+                if (typeof onSceneRendered === "function") {
+                    onSceneRendered(_reactDom2.default.findDOMNode(renderer.domElement));
+                }
             };
 
             var onError = function onError(xhr) {};
@@ -49920,14 +49927,17 @@ OBJViewer.propTypes = {
     width: _propTypes2.default.number,
     height: _propTypes2.default.number,
     backgroundColor: _propTypes2.default.string,
-    modelColor: _propTypes2.default.string
+    modelColor: _propTypes2.default.string,
+    sceneClassName: _propTypes2.default.string,
+    onSceneRendered: _propTypes2.default.func
 };
 OBJViewer.defaultProps = {
     backgroundColor: '#EAEAEA',
     modelColor: '#B92C2C',
     height: 400,
     width: 400,
-    orbitControls: true
+    orbitControls: true,
+    sceneClassName: ''
 };
 ;
 
@@ -70670,7 +70680,9 @@ var STLViewer = function (_Component) {
                 height = props.height,
                 modelColor = props.modelColor,
                 backgroundColor = props.backgroundColor,
-                orbitControls = props.orbitControls;
+                orbitControls = props.orbitControls,
+                sceneClassName = props.sceneClassName,
+                onSceneRendered = props.onSceneRendered;
 
             var xDims = void 0,
                 yDims = void 0,
@@ -70717,6 +70729,7 @@ var STLViewer = function (_Component) {
                 });
                 renderer.setSize(width, height);
                 renderer.setClearColor(backgroundColor, 1);
+                renderer.domElement.className = sceneClassName;
 
                 if (orbitControls) {
                     controls = new OrbitControls(camera, _reactDom2.default.findDOMNode(component));
@@ -70727,6 +70740,10 @@ var STLViewer = function (_Component) {
                 _reactDom2.default.findDOMNode(_this2).replaceChild(renderer.domElement, _reactDom2.default.findDOMNode(_this2).firstChild);
 
                 render();
+
+                if (typeof onSceneRendered === "function") {
+                    onSceneRendered(_reactDom2.default.findDOMNode(renderer.domElement));
+                }
             };
 
             var onProgress = function onProgress(xhr) {
@@ -70809,7 +70826,9 @@ STLViewer.propTypes = {
     width: _propTypes2.default.number,
     height: _propTypes2.default.number,
     backgroundColor: _propTypes2.default.string,
-    modelColor: _propTypes2.default.string
+    modelColor: _propTypes2.default.string,
+    sceneClassName: _propTypes2.default.string,
+    onSceneRendered: _propTypes2.default.func
 };
 STLViewer.defaultProps = {
     backgroundColor: '#EAEAEA',
@@ -70817,7 +70836,8 @@ STLViewer.defaultProps = {
     height: 400,
     width: 400,
     rotate: true,
-    orbitControls: true
+    orbitControls: true,
+    sceneClassName: ''
 };
 ;
 
