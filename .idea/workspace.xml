@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9ecb487-0c11-4921-8d70-17c4ebaf3f15" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/test-app/build/asset-manifest.json" afterPath="$PROJECT_DIR$/test-app/build/asset-manifest.json" />
-      <change beforePath="$PROJECT_DIR$/test-app/build/index.html" afterPath="$PROJECT_DIR$/test-app/build/index.html" />
-      <change beforePath="$PROJECT_DIR$/test-app/build/service-worker.js" afterPath="$PROJECT_DIR$/test-app/build/service-worker.js" />
-      <change beforePath="$PROJECT_DIR$/test-app/build/static/js/main.74daa6a5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-app/build/static/js/main.74daa6a5.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-app/src/App.js" afterPath="$PROJECT_DIR$/test-app/src/App.js" />
-    </list>
+    <list default="true" id="f9ecb487-0c11-4921-8d70-17c4ebaf3f15" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,8 +38,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="45">
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -85,6 +76,7 @@
       <find>orbitRender</find>
       <find>home</find>
       <find>orbitControls</find>
+      <find>serv</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,6 +161,23 @@
               <item name="npm-react-component-starter" type="b2602c69:ProjectViewProjectNode" />
               <item name="npm-react-component-starter" type="462c0819:PsiDirectoryNode" />
               <item name="test-app" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="npm-react-component-starter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="npm-react-component-starter" type="462c0819:PsiDirectoryNode" />
+              <item name="test-app" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="main.32c4e3b3.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="npm-react-component-starter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="npm-react-component-starter" type="462c0819:PsiDirectoryNode" />
+              <item name="test-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -215,12 +224,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519204916884</updated>
-      <workItem from="1519204918712" duration="7165000" />
+      <workItem from="1519204918712" duration="7545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7165000" />
+    <option name="totallyTimeSpent" value="7545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -380,8 +389,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="45">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
