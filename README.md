@@ -5,6 +5,8 @@ Based on THREE.js and [react-stl-viewer](https://github.com/chiedolabs/react-stl
 
 ### [Live Demo](https://bohdanbirdie.github.io/stl-obj-demo/).
 
+#### [Example](https://github.com/bohdanbirdie/stl-obj-demo/tree/master).
+
 ## How to use
 1. Install the app
     - via npm ```npm install react-stl-obj-viewer --save```
