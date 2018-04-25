@@ -46,3 +46,4 @@ static defaultProps = {
 
 Simply get your element _(canvas scene)_ by any selector and call `.toDataURL("image/png")` on it.
 ___
+hello dude!
