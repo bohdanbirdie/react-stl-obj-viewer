@@ -8,7 +8,6 @@ import {ScaleLoader} from 'react-spinners';
 
 const OrbitControls = OrbitControlsModule(THREE);
 
-
 class OBJViewer extends Component {
     static propTypes = {
         className: PropTypes.string,
@@ -40,7 +39,7 @@ class OBJViewer extends Component {
         this.renderModel(this.props)
     }
 
-    componentWillUpdate(nextProps) {
+    componentDidUpdate(nextProps) {
         this.renderModel(nextProps)
     }
 
@@ -147,7 +146,7 @@ class OBJViewer extends Component {
         };
     }
 
-    componentWillReceiveProps() {
+    componentDidUpdate() {
         this.setState({allowUpdate: true})
     }
 

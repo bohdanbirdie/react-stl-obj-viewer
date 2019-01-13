@@ -135,7 +135,7 @@ class STLViewer extends Component {
         return true
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate(nextProps, nextState) {
         this.renderModel(nextProps);
     }
 
