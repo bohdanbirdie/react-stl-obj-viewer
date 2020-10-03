@@ -38,19 +38,24 @@ class STLViewer extends Component {
 
     renderModel(props) {
         let camera, scene, renderer, mesh, distance, controls;
-        const {url, file, width, height, modelColor, backgroundColor, orbitControls, sceneClassName, onSceneRendered} = props;
+        const {url, file, width, height, modelColor, backgroundColor, orbitControls, sceneClassName, onSceneRendered, lights} = props;
         let xDims, yDims, zDims;
         let component = this;
-
+        if(!lights){
+            lights = [[0,1,0]];
+        }
 
         scene = new THREE.Scene();
         distance = 10000;
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        directionalLight.position.x = 0;
-        directionalLight.position.y = 1;
-        directionalLight.position.z = 0;
-        directionalLight.position.normalize();
-        scene.add(directionalLight);
+
+        lights.forEach((vector)=>{
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.x = vector[0];
+            directionalLight.position.y = vector[1];
+            directionalLight.position.z = vector[2];
+            directionalLight.position.normalize();
+            scene.add(directionalLight);
+        });
 
         const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
         scene.add(ambientLight);
